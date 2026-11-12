@@ -1,0 +1,46 @@
+name: "Documentation report"
+description: "Point out something missing, unclear, or incorrect in the docs."
+title: "[Docs] "
+labels:
+  - documentation
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Which page or section?
+      description: "Paste a link or give the file name and heading."
+      placeholder: "Documentation URL or file path"
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's the issue?
+      options:
+        - Incorrect information
+        - Something is missing
+        - Instructions are unclear
+        - Example does not work
+        - Typo or formatting
+        - Outdated information
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What should we know?
+      placeholder: "Tell us what's confusing or incorrect."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change (optional)
+      description: "A correction or example is welcome, but not required."
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
