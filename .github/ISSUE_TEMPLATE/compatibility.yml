@@ -1,0 +1,59 @@
+name: "Compatibility report"
+description: "Report a problem working with an editor, extension, compiler, runtime, or another tool."
+title: "[Compatibility] "
+labels:
+  - compatibility
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Acceleratorrr~ version
+      placeholder: "Version or build"
+    validations:
+      required: true
+
+  - type: input
+    id: other_software
+    attributes:
+      label: Software or extension involved
+      placeholder: "Name of the editor, extension, compiler, or tool"
+    validations:
+      required: true
+
+  - type: input
+    id: other_version
+    attributes:
+      label: Its version
+      placeholder: "Version number, if known"
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What isn't working together?
+      placeholder: "Describe what happens when you use them together."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "Describe the expected behaviour."
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps or setup details
+      placeholder: "Share the setup or steps that make the problem appear."
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error messages
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional details
+      description: "Workarounds, links, screenshots, or other context."
