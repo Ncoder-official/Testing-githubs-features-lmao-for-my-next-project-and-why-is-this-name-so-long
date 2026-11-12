@@ -1,0 +1,55 @@
+name: "Language pack report"
+description: "Report a language pack problem, suggest an update, or propose a new pack."
+title: "[Language pack] "
+labels:
+  - language-pack
+body:
+  - type: dropdown
+    id: request
+    attributes:
+      label: What do you need?
+      options:
+        - Report a problem with a pack
+        - Suggest an update
+        - Propose a new language pack
+        - Ask about pack compatibility
+    validations:
+      required: true
+
+  - type: input
+    id: pack_name
+    attributes:
+      label: Pack name
+      placeholder: "Name or identifier, if known"
+
+  - type: input
+    id: pack_version
+    attributes:
+      label: Pack version
+      placeholder: "Version, if known"
+
+  - type: input
+    id: language
+    attributes:
+      label: Language or toolchain
+      placeholder: "Language, compiler, runtime, or related tool"
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Tell us about it
+      description: "For a new pack, explain what it should support. For a problem, describe what isn't working."
+      placeholder: "Add the details you have."
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example files or behaviour
+      description: "Small examples, error messages, or links can help."
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
