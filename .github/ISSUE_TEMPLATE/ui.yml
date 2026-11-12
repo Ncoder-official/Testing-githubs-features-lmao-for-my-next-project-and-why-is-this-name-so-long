@@ -1,0 +1,45 @@
+name: "User interface report"
+description: "Report a visual problem or an awkward interface interaction."
+title: "[UI] "
+labels:
+  - user-interface
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What seems wrong?
+      options:
+        - Visual glitch
+        - Layout or spacing
+        - Text or readability
+        - Interaction feels confusing
+        - Accessibility
+        - Theme or styling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you notice?
+      placeholder: "Describe what you were doing and what felt off."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What would make more sense?
+      placeholder: "Describe how you expected it to look or behave."
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshot or recording
+      description: "You can attach an image or recording after creating the issue, or paste a link."
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra context
