@@ -1,0 +1,50 @@
+name: "Build and compilation report"
+description: "Report a problem building Acceleratorrr~ or one of its components."
+title: "[Build] "
+labels:
+  - build
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Source version
+      placeholder: "Release, branch, or commit"
+
+  - type: input
+    id: toolchain
+    attributes:
+      label: Build tools
+      description: "Compiler, SDK, build system, and versions."
+      placeholder: "e.g. CMake, GCC, MSVC"
+
+  - type: dropdown
+    id: target
+    attributes:
+      label: Build target
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Cross-platform
+        - Other
+        - Not sure
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Build command or steps
+      render: text
+
+  - type: textarea
+    id: error
+    attributes:
+      label: What failed?
+      description: "Paste the relevant error and explain what you were trying to build."
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional details
