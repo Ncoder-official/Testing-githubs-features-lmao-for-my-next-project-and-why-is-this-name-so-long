@@ -1,0 +1,61 @@
+name: "Installation and setup help"
+description: "Report trouble installing, updating, or getting Acceleratorrr~ running."
+title: "[Setup] "
+labels:
+  - installation
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version you're installing
+      placeholder: "Version or build"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux
+        - macOS
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where does it get stuck?
+      options:
+        - Download
+        - Installation
+        - First launch
+        - Updating
+        - Configuration
+        - Removing / uninstalling
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What happens?
+      placeholder: "Describe what you tried and where it goes wrong."
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message or logs
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Other details
+      description: "Install method, permissions, screenshots, or anything else that may help."
