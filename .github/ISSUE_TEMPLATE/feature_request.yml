@@ -1,0 +1,49 @@
+name: "Feature request"
+description: "Suggest something that would make Acceleratorrr~ more useful."
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to improve?
+      description: "What are you trying to do that is difficult or not currently possible?"
+      placeholder: "Describe the problem or missing capability."
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to happen?
+      description: "Describe your idea in your own words. It doesn't need to be fully designed."
+      placeholder: "How do you picture it working?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this relate to?
+      options:
+        - Editing
+        - Completion
+        - Refactoring
+        - Navigation
+        - Debugging
+        - Diagnostics
+        - Code generation
+        - Context management
+        - Automation
+        - Language support
+        - User interface
+        - Other / not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Examples or extra context
+      description: "Mockups, examples, or a workflow where this would help are useful, but optional."
