@@ -1,163 +1,107 @@
-
-name: "Acceleratorrr~ Feature / Improvement"
-description: "Propose an improvement or new capability for Ncoder Coding Acceleratorrr~."
-title: "[Acceleratorrr] "
+name: "Bug report"
+description: "Something isn't working as expected."
+title: "[Bug] "
 labels:
-  - enhancement
-  - acceleratorrr
+  - bug
 body:
   - type: markdown
     attributes:
       value: |
-        ## Ncoder Coding Acceleratorrr~
+        Thanks for taking the time to report this. A few details will help us track it down.
 
-        Welcome to the feature request system!
-
-        Acceleratorrr~ focuses on native, deterministic coding acceleration.
-        AI is not a dependency or requirement.
-
-        Please describe your proposal clearly and explain how it improves
-        the coding workflow.
+  - type: input
+    id: version
+    attributes:
+      label: Acceleratorrr~ version
+      placeholder: "Version, build number, or commit"
+    validations:
+      required: true
 
   - type: dropdown
-    id: request_type
+    id: os
     attributes:
-      label: Request type
-      description: What are you proposing?
+      label: Operating system
       options:
-        - New feature
-        - Improvement to existing feature
-        - Workflow enhancement
-        - Architecture improvement
-        - Language support
-        - Integration
-        - Performance optimization
+        - Windows 11
+        - Windows 10
+        - Linux
+        - macOS
         - Other
     validations:
       required: true
 
-  - type: dropdown
-    id: subsystem
+  - type: input
+    id: environment
     attributes:
-      label: Affected subsystem
-      description: Which part of Acceleratorrr~ does this concern?
+      label: Editor and relevant tools
+      description: "For example: VS Code, compiler, runtime, or extensions."
+      placeholder: "Add anything relevant"
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Where does the problem occur?
       options:
         - Editing
-        - Code construction and generation
+        - Completion
+        - Refactoring
         - Navigation
         - Debugging
+        - Diagnostics
+        - Code generation
         - Context management
-        - Actions and automation
-        - Runtime and execution
+        - Action engine
+        - Execution
         - Language packs
-        - Project management
-        - Developer tooling
         - User interface
-        - Architecture
-        - Other / Not sure
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: related_features
-    attributes:
-      label: Related existing feature concepts
-      description: Select any existing concepts related to your proposal.
-      options:
-        - label: Live Refactoring Preview
-        - label: Intelligent Indentation
-        - label: Parameter Guidance
-        - label: Contextual Completion Ranking
-        - label: Smart Structure Completion
-        - label: Contextual Code Replacement
-        - label: Type-Aware Value Suggestions
-        - label: Smart Code Expansion
-        - label: Reusable Generation Presets
-        - label: Peek-and-Edit
-        - label: Symbol Breadcrumb Jump
-        - label: Smart Backtracking
-        - label: Related Declaration Jump
-        - label: Scope-Aware Search
-        - label: Diagnostic Quick Navigation
-        - label: Inline Fix Comparison
-        - label: Expression Evaluation
-        - label: Local Test Execution
-        - label: Debugger Data Pins
-        - label: Edit Context Engine
-        - label: Action Prediction & Action Chains
-        - label: Other / New concept
-
-  - type: input
-    id: feature_name
-    attributes:
-      label: Feature name
-      description: Give your proposed feature a descriptive name.
-      placeholder: "Example: Context-Aware Multi-Edit"
+        - Installation / updater
+        - Core engine
+        - Other / not sure
     validations:
       required: true
 
   - type: textarea
-    id: problem
+    id: summary
     attributes:
-      label: Problem statement
-      description: What problem or limitation does this address?
-      placeholder: |
-        Describe the current limitation and why it matters.
+      label: What went wrong?
+      description: "A quick description is enough to start."
+      placeholder: "Tell us what happened..."
     validations:
       required: true
 
   - type: textarea
-    id: proposal
+    id: reproduce
     attributes:
-      label: Proposed functionality
-      description: Explain how the feature should work.
+      label: How can we reproduce it?
+      description: "List the steps if you know them."
       placeholder: |
-        Describe the expected behaviour, interactions and functionality.
-    validations:
-      required: true
-
-  - type: textarea
-    id: workflow
-    attributes:
-      label: Example workflow
-      description: How would a developer use this feature?
-      placeholder: |
-        1. Developer performs an action.
-        2. Acceleratorrr responds.
-        3. Developer completes the workflow.
+        1. I opened...
+        2. I selected...
+        3. Then...
     validations:
       required: false
 
   - type: textarea
-    id: acceptance
+    id: expected
     attributes:
-      label: Expected results and acceptance criteria
-      description: How can we determine whether this feature is correctly implemented?
-      placeholder: |
-        - [ ] Expected behaviour works.
-        - [ ] Edge cases are handled.
-        - [ ] Existing functionality remains unaffected.
+      label: What did you expect to happen?
+      placeholder: "Describe the expected result."
     validations:
       required: false
 
-  - type: dropdown
-    id: priority
+  - type: textarea
+    id: logs
     attributes:
-      label: Suggested priority
-      options:
-        - Critical
-        - High
-        - Medium
-        - Low
-        - Experimental
+      label: Logs or error messages
+      description: "Paste relevant output. Remove tokens, passwords, and personal data first."
+      render: text
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: additional
+    id: extra
     attributes:
-      label: Additional details
-      description: References, mockups, technical considerations or anything else.
-      placeholder: "Additional context..."
+      label: Anything else?
+      description: "Screenshots, workarounds, when it started, or other useful context."
     validations:
       required: false
