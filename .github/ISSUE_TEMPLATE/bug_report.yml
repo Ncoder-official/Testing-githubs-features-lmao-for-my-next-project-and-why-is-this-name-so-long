@@ -1,0 +1,163 @@
+
+name: "Acceleratorrr~ Feature / Improvement"
+description: "Propose an improvement or new capability for Ncoder Coding Acceleratorrr~."
+title: "[Acceleratorrr] "
+labels:
+  - enhancement
+  - acceleratorrr
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Ncoder Coding Acceleratorrr~
+
+        Welcome to the feature request system!
+
+        Acceleratorrr~ focuses on native, deterministic coding acceleration.
+        AI is not a dependency or requirement.
+
+        Please describe your proposal clearly and explain how it improves
+        the coding workflow.
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      description: What are you proposing?
+      options:
+        - New feature
+        - Improvement to existing feature
+        - Workflow enhancement
+        - Architecture improvement
+        - Language support
+        - Integration
+        - Performance optimization
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Affected subsystem
+      description: Which part of Acceleratorrr~ does this concern?
+      options:
+        - Editing
+        - Code construction and generation
+        - Navigation
+        - Debugging
+        - Context management
+        - Actions and automation
+        - Runtime and execution
+        - Language packs
+        - Project management
+        - Developer tooling
+        - User interface
+        - Architecture
+        - Other / Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: related_features
+    attributes:
+      label: Related existing feature concepts
+      description: Select any existing concepts related to your proposal.
+      options:
+        - label: Live Refactoring Preview
+        - label: Intelligent Indentation
+        - label: Parameter Guidance
+        - label: Contextual Completion Ranking
+        - label: Smart Structure Completion
+        - label: Contextual Code Replacement
+        - label: Type-Aware Value Suggestions
+        - label: Smart Code Expansion
+        - label: Reusable Generation Presets
+        - label: Peek-and-Edit
+        - label: Symbol Breadcrumb Jump
+        - label: Smart Backtracking
+        - label: Related Declaration Jump
+        - label: Scope-Aware Search
+        - label: Diagnostic Quick Navigation
+        - label: Inline Fix Comparison
+        - label: Expression Evaluation
+        - label: Local Test Execution
+        - label: Debugger Data Pins
+        - label: Edit Context Engine
+        - label: Action Prediction & Action Chains
+        - label: Other / New concept
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: Feature name
+      description: Give your proposed feature a descriptive name.
+      placeholder: "Example: Context-Aware Multi-Edit"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem or limitation does this address?
+      placeholder: |
+        Describe the current limitation and why it matters.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed functionality
+      description: Explain how the feature should work.
+      placeholder: |
+        Describe the expected behaviour, interactions and functionality.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Example workflow
+      description: How would a developer use this feature?
+      placeholder: |
+        1. Developer performs an action.
+        2. Acceleratorrr responds.
+        3. Developer completes the workflow.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Expected results and acceptance criteria
+      description: How can we determine whether this feature is correctly implemented?
+      placeholder: |
+        - [ ] Expected behaviour works.
+        - [ ] Edge cases are handled.
+        - [ ] Existing functionality remains unaffected.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Suggested priority
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+        - Experimental
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional details
+      description: References, mockups, technical considerations or anything else.
+      placeholder: "Additional context..."
+    validations:
+      required: false
