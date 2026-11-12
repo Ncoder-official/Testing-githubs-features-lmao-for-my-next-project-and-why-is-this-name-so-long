@@ -1,0 +1,59 @@
+name: "Performance report"
+description: "Report slowdowns, high resource use, or other performance problems."
+title: "[Performance] "
+labels:
+  - performance
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share what feels slow or unusually resource-intensive. Measurements are helpful,
+        but you can still report what you noticed without running a benchmark.
+
+  - type: input
+    id: version
+    attributes:
+      label: Acceleratorrr~ version
+      placeholder: "Version or build"
+    validations:
+      required: true
+
+  - type: input
+    id: system
+    attributes:
+      label: System details
+      description: "CPU, memory, GPU, or anything else that might matter."
+      placeholder: "Add what you know"
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What feels slower than it should?
+      placeholder: "Describe what you were doing and what you noticed."
+    validations:
+      required: true
+
+  - type: textarea
+    id: conditions
+    attributes:
+      label: When does it happen?
+      description: "Does it happen every time, only in large projects, or under a particular workload?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: measurements
+    attributes:
+      label: Measurements (optional)
+      description: "CPU or memory use, timings, benchmark results, or before/after comparisons."
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Other details
+      description: "Add logs, screenshots, project size, or anything else that may help."
+    validations:
+      required: false
