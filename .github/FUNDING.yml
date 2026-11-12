@@ -1,0 +1,34 @@
+# ============================================================
+# THE ABSOLUTELY OVERPOPULATED FUNDING CONFIGURATION
+# Example values only. Replace them with real funding accounts.
+# ============================================================
+
+# GitHub Sponsors: up to four usernames
+github:
+  - octocat
+  - hubot
+  - monalisa
+  - github
+
+# External funding platforms
+patreon: example-creator
+open_collective: example-project
+ko_fi: example-creator
+tidelift: npm/example-package
+community_bridge: example-project
+liberapay: example-creator
+issuehunt: example-creator
+polar: example-creator
+buy_me_a_coffee: examplecreator
+thanks_dev: u/gh/octocat
+
+# Custom funding destinations: up to four URLs
+custom:
+  - "https://example.com/sponsor"
+  - "https://example.org/support"
+  - "https://example.net/fund"
+  - "https://github.com/sponsors/octocat"
+
+# ============================================================
+# END OF FUNDING CONFIGURATION
+# ============================================================
